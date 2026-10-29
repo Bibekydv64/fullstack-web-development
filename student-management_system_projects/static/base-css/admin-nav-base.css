@@ -1,0 +1,33 @@
+
+.main-container{
+    height: 10vh;
+    width: min(100vw);
+    background-color: #043869;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.main-container1{
+    color: whitesmoke;
+    font-size: 1.4rem;
+    margin-left: 8px;
+}
+
+.nav-container{
+    display: flex;
+    gap: 40px;
+  
+}
+
+.dashboard-nav{
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+.dashboard-nav:hover{
+    color: skyblue;
+}

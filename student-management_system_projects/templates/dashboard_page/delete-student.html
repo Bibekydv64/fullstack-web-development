@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base-css/admin-nav-base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard/delete-student.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-...-sha-hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    {% include "base-html-page/admin-nav-base.html" %}
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="mini-container">
+                    <div class="mini-container1">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+                <h2 class="h2">Delete Student</h2>
+                <p class="p">Are You Sure Want To Delete</p>
+                <p class="p1">"Bibek Yadav"?</p>
+                <p class="p2">This action cannot be undone</p>
+
+                <div class="container-btn">
+                    <button class="btn btn-delete"><a class="btn-text" href="/delete-student1">Delete</a></button>
+                    <button class="btn"><a class="btn-text" href="/all-student">Cencel</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

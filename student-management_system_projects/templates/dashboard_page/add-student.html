@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='dashboard/add-student.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base-css/admin-nav-base.css') }}">
+</head>
+<body>
+    
+    {% include "base-html-page/admin-nav-base.html" %}
+
+    <section class="section1">
+        <div class="father-container">
+            <h2>Add New Student</h2>
+            <form action="/add-student" method="post">
+                <div>
+                    <label class="input-text" for="student-name">Name</label>
+                </div>
+                <div>
+                    <input class="input" id="student-name" name="name" type="text" placeholder="Enter student name" required>
+                </div>
+
+                <div>
+                    <label class="input-text" for="student-email">Email</label>
+                </div>
+                <div>
+                    <input class="input" id="student-email" name="email" type="email" placeholder="Enter email address" required>
+                </div>
+
+                <div>
+                    <label class="input-text" for="student-age">Age</label>
+                </div>
+                <div>
+                    <input class="input" id="student-age" name="age" type="number" min="1" placeholder="Enter age" required>
+                </div>
+
+                <div>
+                    <label class="input-text" for="course-select">Course</label>
+                </div>
+                <div>
+                    <select id="course-select" name="cources" class="option" required>
+                        <option value="" selected disabled>Select course</option>
+                        <option value="Bca">BCA</option>
+                        <option value="BE IT">BE IT</option>
+                        <option value="BE SOFTWERE">BE SOFTWERE</option>
+                        <option value="BE CIVEL">BE CIVEL</option>
+                        <option value="BE COMPUTER">BE COMPUTER</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn" type="submit">Save Student</button>
+                    <a class="btn btn-cancel" href="/admin-dashboard">Cancel</a>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

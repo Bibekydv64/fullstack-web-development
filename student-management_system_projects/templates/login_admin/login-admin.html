@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'login_admin/admin-login.css') }}">
+
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <img class="img" src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="logo">
+            <a class="about" href="/">home</a>
+            <a class="about" href="{{ url_for('admin_login') }}">admin</a>
+        </nav>
+    </header>
+
+    <main class="login-main">
+        <h1 class="welcome">Welcome to the Student Management System Dashboard</h1>
+        <section class="form-container">
+            <form action="/admin-login" method="post">
+                <h2>Login</h2>
+                <div>
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input class="input" id="email" name="email" type="email" placeholder="Email" autocomplete="username" required>
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                </div>
+                <div>
+                    <input class="input" id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+                </div>
+
+                <div>
+                    <button class="btn" type="submit">Log in</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

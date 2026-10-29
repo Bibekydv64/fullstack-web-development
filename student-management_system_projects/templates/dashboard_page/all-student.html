@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='dashboard/all-students.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='base-css/admin-nav-base.css') }}">
+</head>
+<body>
+    {% include "base-html-page/admin-nav-base.html" %}
+
+    <main>
+        <section class="first-section">
+            <div class="container">
+                <h1 class="text">All Students</h1>
+                <div>
+                    <input class="input" type="text" placeholder="Search By Name" name="name" required>
+                    <button class="btn">
+                        <a class="side-btn" href="#home">Search</a>
+                    </button>
+                </div>
+                <table>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Cources</th>
+                      <th colspan="3">Action</th>
+                    </tr>
+                    {% for num in student_info %}
+                        <tr>
+                          <td>{{ num[0] }}</td>
+                          <td>{{ num[1] }}</td>
+                          <td>{{ num[2] }}</td>
+                          <td class="action-cell"><button class="container-btn boxer"><a class="anker-btn-table" href="/view-profile?student_ID={{ num[0] }}">View</a></button></td>
+                          <td class="action-cell"><button class="container-btn boxer1"><a class="anker-btn-table" href="/edit-student?student_ID={{ num[0] }}">Edit</a></button></td>
+                          <td class="action-cell"><button class="container-btn boxer2"><a class="anker-btn-table" href="/delete-student?student_ID={{ num[0] }}">Delete</a></button></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

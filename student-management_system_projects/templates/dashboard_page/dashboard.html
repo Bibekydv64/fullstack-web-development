@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base-css/admin-nav-base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard/dashboard.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+{% include "base-html-page/admin-nav-base.html" %}
+
+    <section>
+        <main class="admin-main-container">
+
+                <img class="main-img" src="{{ url_for('static', filename = 'images/main-logo.jpg') }}" alt="img">
+
+            <div class="container">
+                <h1 class="box ">Welcome To Student Managment System</h1>
+                <p class="box" >Manage Your Students Easily and Efficently</p>
+            </div>
+        </main>
+    </section>
+
+    <section>
+        <div class=" container-section2">
+            <div class="box1 miniconrainer1">
+                <div class="font-logo"><i class="fa-solid fa-circle-user"></i></div>
+                <div>
+                    <p class="p">Total Students</p>
+                    <h3 class="p">90</h3>
+                </div>
+            </div>
+
+
+            <div class="box1 miniconrainer2">
+                <div class="box1 miniconrainer1">
+                    <div class="font-logo"><i class="fa-solid fa-circle-user"></i></div>
+                    <div>
+                        <p class="p">Male Students</p>
+                        <h3 class="p">100</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box1 miniconrainer3">
+                <div class="box1 miniconrainer1">
+                    <div class="font-logo"><i class="fa-solid fa-circle-user"></i></div>
+                    <div>
+                        <p class="p">Female Students</p>
+                        <h3 class="p">90</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box1 miniconrainer4">
+                <div class="btn"><a class="innertext" href="/add-student">+ Add New Student</a></div>
+                <div class="btn1"><a class="inner-text" href="/all-student">View All Students</a></div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container-section3">
+            <h3 class="h3-section3">Recent Students</h3>
+            <table>
+              <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Cources</th>
+              </tr>
+
+              {% for num in student_info %}
+                <tr>
+                  <td>{{ num[0] }}</td>
+                  <td>{{ num[1] }}</td>
+                  <td>{{ num[2] }}</td>
+                  <td>{{ num[3] }}</td>
+                  <td>{{ num[4] }}</td>
+                </tr>
+              {% endfor %}
+            
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Your Website. All rights reserved.</p>
+    </footer>
+
+
+    
+</body>
+</html>

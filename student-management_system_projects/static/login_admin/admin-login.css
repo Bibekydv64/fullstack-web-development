@@ -1,0 +1,136 @@
+:root {
+    --navy: #17324d;
+    --blue: #2563a6;
+    --blue-hover: #1e4f86;
+    --page-bg: #eaf1f8;
+    --text: #26384a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--page-bg);
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    background-color: var(--navy);
+    min-height: 4.5rem;
+    padding: 0.5rem clamp(1rem, 5vw, 4rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about {
+    color: whitesmoke;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.about:hover,
+.about:focus-visible {
+    background-color: var(--blue-hover);
+    color: #ffffff;
+}
+
+.about:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.login-main {
+    min-height: calc(100vh - 4.5rem);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.welcome {
+    color: var(--navy);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.form-container {
+    width: min(100%, 28rem);
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #d5e0eb;
+    box-shadow: 0 1rem 2.5rem rgb(23 50 77 / 14%);
+}
+
+.form-container h2 {
+    margin-bottom: 1.75rem;
+    color: var(--navy);
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin: 1rem 0 0.45rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    min-height: 2.9rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid #b8c7d6;
+    border-radius: 0.4rem;
+    color: var(--text);
+    font: inherit;
+}
+
+.input:focus {
+    border-color: var(--blue);
+    outline: 3px solid rgb(37 99 166 / 20%);
+}
+
+.btn {
+    width: 100%;
+    min-height: 2.9rem;
+    margin-top: 1.5rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: var(--blue);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--blue-hover);
+}
+
+.btn:focus-visible {
+    outline: 3px solid #7eb6e8;
+    outline-offset: 3px;
+}

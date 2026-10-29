@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='dashboard/view_profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='base-css/admin-nav-base.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    {% include "base-html-page/admin-nav-base.html" %}
+
+
+    <main>
+        <section class="section1">
+            <div class="container">
+                <div class="profile-font"><i class="fa-solid fa-circle-user"></i></div>
+
+                {% for num in single_student_info %}
+                
+                    <h1 class="h1">{{ num[1] }}</h1>
+                    <p class="p">Student ID:{{ num[0] }}</p>
+                    <p class="p">Email : {{ num[3] }}</p>
+                    <p class="p">Cources : {{ num[4] }}</p>
+                    <p class="p">Age : {{ num[2] }}</p>
+                    <p class="p">Phone : 9819886095</p>
+                    <p class="p">departmant : BE IT</p>
+                {% endfor %}
+                <button class="boxbtn"><a class="btn" href="/all-student">Back To Students</a></button>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+</html>
