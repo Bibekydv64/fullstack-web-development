@@ -35,75 +35,11 @@ This is a target schedule, not a deadline. If you cannot independently complete 
 
 # PHASE 0 — FRONTEND AND FLASK PREPARATION
 
-**Duration: Weeks 1–2**
 
-## Frontend Revision
 
-### HTML
-1. Semantic HTML.
-2. Forms and inputs.
-3. Tables.
-4. Form validation.
-5. Page structure.
-6. Accessibility fundamentals.
-
-### CSS
-1. Selectors.
-2. Box model.
-3. Flexbox.
-4. Grid.
-5. Responsive design.
-6. Positioning.
-7. Reusable components.
-8. Dashboard layouts.
-
-### JavaScript
-1. Variables and data types.
-2. Functions.
-3. Arrays and objects.
-4. Loops and conditions.
-5. DOM selection.
-6. DOM manipulation.
-7. Event handling.
-8. Event delegation.
-9. Form handling.
-10. Fetch API.
-11. JSON.
-12. Async/await.
-13. Error handling.
-
-### Exercises
-1. Build a responsive navigation bar.
-2. Create a login form.
-3. Validate form inputs.
-4. Create dynamic tables.
-5. Add and remove records using JavaScript.
-6. Build a search and filter interface.
-7. Fetch sample JSON data.
-8. Display API data dynamically.
-
-### Mini Project 0 — Interactive Management Interface
-
-Features:
-- Responsive sidebar.
-- Navigation.
-- Dashboard cards.
-- Dynamic table.
-- Search.
-- Filters.
-- Form validation.
-- JavaScript event handling.
-
-### Completion Goal
-
-Build a functional frontend without depending on copied code.
-
----
 
 # PHASE 1 — FLASK DEVELOPMENT FOUNDATION
-
 **Duration: Weeks 3–6**
-
 ## Week 3 — Flask Fundamentals
 
 ### Topics
@@ -383,21 +319,8 @@ Do not wait until you learn Django, NumPy or AI to start approaching clients.
 - Client communication.
 
 ### Completion Goal
-
-Have a portfolio, a clear service offering and a repeatable client acquisition process.
-
-**Important:** Finding clients is not guaranteed after two weeks. Client acquisition is a continuing activity. Never promise features you cannot deliver or accept sensitive client data without appropriate security.
-
----
-
-# PART B — DJANGO DEVELOPMENT
-
-# PHASE 4 — DJANGO DEVELOPMENT
-
-**Duration: Weeks 15–18**
-
 You have already learned Flask and built multiple applications. Now learn Django as a second backend framework.
-
+---------------------------------------------------------------------DJANJO FRAMEWORKS---------------------------------------------------------------------------------------------------------
 ## Week 15 — Django Fundamentals
 
 ### Topics
